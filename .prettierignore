@@ -3,3 +3,4 @@ testApp
 dist
 build
 .cache
+pnpm-lock.yaml
