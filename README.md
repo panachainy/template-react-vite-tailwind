@@ -1,5 +1,7 @@
 # Setup
 
+[Web](https://template-react-vite-tailwind.pages.dev)
+
 ## Install Tailwind CSS
 
 1. [Tailwind CSS with Vite](https://tailwindcss.com/docs/installation/using-vite)
