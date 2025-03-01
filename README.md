@@ -8,3 +8,29 @@
 ## Install Prettier
 
 [Automatic Class Sorting with Prettier](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
+
+## Command Documentation
+
+### How to Run static
+
+To build the project, run:
+
+```sh
+pnpm build
+```
+
+artifacts will be generated in the `dist` folder.
+
+### How to Run with Node
+
+To run the project in development mode, run:
+
+```sh
+pnpm dev
+```
+
+To start the project in production mode, run:
+
+```sh
+pnpm start
+```
