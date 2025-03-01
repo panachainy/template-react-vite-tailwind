@@ -1,10 +1,10 @@
 # Setup
 
-## Install tailwind 4.0
+## Install Tailwind CSS
 
-1. [ref](https://tailwindcss.com/docs/installation/using-vite)
-2. [ref](https://tailwindui.com/documentation#icons)
+1. [Tailwind CSS with Vite](https://tailwindcss.com/docs/installation/using-vite)
+2. [Tailwind UI Icons](https://tailwindui.com/documentation#icons)
 
-## Install prettier
+## Install Prettier
 
-[ref](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
+[Automatic Class Sorting with Prettier](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
