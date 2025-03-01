@@ -34,3 +34,9 @@ To start the project in production mode, run:
 ```sh
 pnpm start
 ```
+
+### Public Directory
+
+The `public` directory is used to serve static assets. Files in this directory are served at the root URL.
+
+For example, if you add a file named `logo.png` in the `public` directory, it will be available at `http://localhost:3000/logo.png`.
