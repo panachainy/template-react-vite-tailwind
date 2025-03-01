@@ -42,3 +42,19 @@ pnpm start
 The `public` directory is used to serve static assets. Files in this directory are served at the root URL.
 
 For example, if you add a file named `logo.png` in the `public` directory, it will be available at `http://localhost:3000/logo.png`.
+
+### Environment Variables
+
+Vite supports environment variables and modes. You can define environment variables in `.env` files. For example, to define a variable for development mode, create a file named `.env.development` and add your variables:
+
+```
+VITE_API_URL=https://api.example.com
+```
+
+To access these variables in your code, use the `import.meta.env` object:
+
+```javascript
+console.log(import.meta.env.VITE_API_URL);
+```
+
+For more information, refer to the [Vite Environment Variables and Modes](https://vite.dev/guide/env-and-mode#modes) documentation.
