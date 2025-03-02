@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write \"**/*.{ts,tsx,md,yml}\"",
-    "format:check": "prettier --check .",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md,yml}\"",
     "prepare": "husky"
   },
   "dependencies": {
