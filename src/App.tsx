@@ -3,6 +3,7 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ErrorPage from './pages/Core/Error'
 import Example from './pages/Example/Example'
+import { LogsProvider } from './providers/Logs'
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router} />
+      <LogsProvider>
+        <RouterProvider router={router} />
+      </LogsProvider>
     </>
   )
 }
