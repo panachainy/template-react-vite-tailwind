@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write \"**/*.{ts,tsx,md,yml}\"",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check \"**/*.{ts,tsx,md,yml}\"",
+    "prepare": "husky"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
@@ -29,6 +30,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "husky": "^9.1.7",
     "prettier": "^3.5.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "~5.7.2",

@@ -54,7 +54,17 @@ VITE_API_URL=https://api.example.com
 To access these variables in your code, use the `import.meta.env` object:
 
 ```javascript
-console.log(import.meta.env.VITE_API_URL);
+console.log(import.meta.env.VITE_API_URL)
 ```
 
 For more information, refer to the [Vite Environment Variables and Modes](https://vite.dev/guide/env-and-mode#modes) documentation.
+
+## Husky
+
+To set up Husky, run the following command:
+
+```sh
+pnpm prepare
+```
+
+This will configure Husky to manage your Git hooks.
