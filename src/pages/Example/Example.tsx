@@ -26,8 +26,8 @@ export default function Example() {
         <li key={person.email} className="flex py-4">
           <img className="size-10 rounded-full" src={person.image} alt="" />
           <div className="ml-3">
-            <p className="text-sm font-medium text-gray-900">{person.name}</p>
-            <p className="text-sm text-gray-500">{person.email}</p>
+            <p className="font-medium text-gray-900 text-sm">{person.name}</p>
+            <p className="text-gray-500 text-sm">{person.email}</p>
           </div>
         </li>
       ))}
