@@ -1,11 +1,11 @@
 import './App.css'
 
+import { LogsProvider } from '@/providers/Logs'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import ErrorPage from './core/Error'
 import { MainLayout } from './layouts/Main'
 import Example from './pages/Example/Example'
 import PokemonPage from './pages/Pokemon/Index'
-import { LogsProvider } from '@/providers/Logs'
 
 const router = createBrowserRouter([
   {
