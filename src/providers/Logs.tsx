@@ -25,6 +25,7 @@ export const LogsProvider: React.FC<{ children: React.ReactNode }> = ({
   )
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useLogs = (): LogsContextType => {
   const context = useContext(LogsContext)
   if (!context) {
@@ -48,8 +49,8 @@ const LogsComponent: React.FC<{ logs: string[] }> = ({ logs }) => {
     >
       <strong>Logs:</strong>
       <ul>
-        {logs.map((log, index) => (
-          <li key={index}>{log}</li>
+        {logs.map((log) => (
+          <li key={`${log}`}>{log}</li>
         ))}
       </ul>
     </div>
