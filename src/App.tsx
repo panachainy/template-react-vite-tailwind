@@ -6,6 +6,7 @@ import ErrorPage from './core/Error'
 import { MainLayout } from './layouts/Main'
 import Example from './pages/Example/Example'
 import PokemonPage from './pages/Pokemon/Index'
+import ZodExample from './pages/Zod/Index'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,15 @@ const router = createBrowserRouter([
     element: (
       <MainLayout>
         <PokemonPage />
+      </MainLayout>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/zod',
+    element: (
+      <MainLayout>
+        <ZodExample />
       </MainLayout>
     ),
     errorElement: <ErrorPage />,

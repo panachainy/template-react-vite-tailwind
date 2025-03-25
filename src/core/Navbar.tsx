@@ -11,6 +11,9 @@ function Navbar() {
         <li>
           <a href="/pokemon">Pokemon</a>
         </li>
+        <li>
+          <a href="/zod">Zod</a>
+        </li>
       </ul>
     </nav>
   )
