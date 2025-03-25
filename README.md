@@ -18,7 +18,7 @@
 To build the project, run:
 
 ```sh
-pnpm build
+bun build
 ```
 
 artifacts will be generated in the `dist` folder.
@@ -28,13 +28,13 @@ artifacts will be generated in the `dist` folder.
 To run the project in development mode, run:
 
 ```sh
-pnpm dev
+bun dev
 ```
 
 To start the project in production mode, run:
 
 ```sh
-pnpm start
+bun start
 ```
 
 ### Public Directory
