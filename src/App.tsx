@@ -2,6 +2,7 @@ import './App.css'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import ErrorPage from './core/Error'
+import { MainLayout } from './layouts/Main'
 import Example from './pages/Example/Example'
 import PokemonPage from './pages/Pokemon/Index'
 import { LogsProvider } from './providers/Logs'
@@ -9,12 +10,20 @@ import { LogsProvider } from './providers/Logs'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Example />,
+    element: (
+      <MainLayout>
+        <Example />
+      </MainLayout>
+    ),
     errorElement: <ErrorPage />,
   },
   {
     path: '/pokemon',
-    element: <PokemonPage />,
+    element: (
+      <MainLayout>
+        <PokemonPage />
+      </MainLayout>
+    ),
     errorElement: <ErrorPage />,
   },
 ])
