@@ -1,7 +1,7 @@
 import './App.css'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import ErrorPage from './pages/Core/Error'
+import ErrorPage from './core/Error'
 import Example from './pages/Example/Example'
 import PokemonPage from './pages/Pokemon/Index'
 import { LogsProvider } from './providers/Logs'
