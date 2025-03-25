@@ -47,7 +47,7 @@ For example, if you add a file named `logo.png` in the `public` directory, it wi
 
 Vite supports environment variables and modes. You can define environment variables in `.env` files. For example, to define a variable for development mode, create a file named `.env.development` and add your variables:
 
-```
+```bash
 VITE_API_URL=https://api.example.com
 ```
 
@@ -63,8 +63,10 @@ For more information, refer to the [Vite Environment Variables and Modes](https:
 
 To set up Husky, run the following command:
 
+TODO: husky is not work on bun will fix later
+
 ```sh
-pnpm prepare
+bun prepare
 ```
 
 This will configure Husky to manage your Git hooks.
