@@ -37,6 +37,9 @@
       "recommended": true,
       "nursery": {
         "useSortedClasses": "error"
+      },
+      "performance": {
+        "noBarrelFile": "error"
       }
     }
   },
