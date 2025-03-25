@@ -70,3 +70,10 @@ bun prepare
 ```
 
 This will configure Husky to manage your Git hooks.
+
+## Dependencies tools
+
+- bun
+- zod
+- clsx
+- tailwindcss
