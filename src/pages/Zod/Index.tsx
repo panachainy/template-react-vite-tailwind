@@ -68,6 +68,46 @@ const ZodExample = () => {
           {validationErrors.username && (
             <p className="text-red-500 text-sm">{validationErrors.username}</p>
           )}
+
+          <div>
+            <label htmlFor="email" className="mb-1 block">
+              Email:
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              value={userData.email}
+              onChange={updateField}
+              className="w-full rounded border p-2"
+            />
+            {validationErrors.email && (
+              <p className="text-red-500 text-sm">{validationErrors.email}</p>
+            )}
+          </div>
+          <div>
+            <label htmlFor="age" className="mb-1 block">
+              Age:
+            </label>
+            <input
+              id="age"
+              type="number"
+              name="age"
+              value={userData.age}
+              onChange={updateField}
+              className="w-full rounded border p-2"
+            />
+            {validationErrors.age && (
+              <p className="text-red-500 text-sm">{validationErrors.age}</p>
+            )}
+          </div>
+
+          <button
+            type="submit"
+            className="w-full rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+          >
+            Submit
+          </button>
         </div>
       </form>
     </div>
