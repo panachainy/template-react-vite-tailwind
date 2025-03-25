@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "format": "biome check --write --unsafe ./**/*.{ts,tsx,css}",
-    "check": "biome check ./**/*.{ts,tsx,css}",
+    "format": "biome check --write --unsafe ./src ./**/*.{ts,tsx,css}",
+    "check": "biome check ./src ./**/*.{ts,tsx,css}",
     "prepare": "husky"
   },
   "dependencies": {
