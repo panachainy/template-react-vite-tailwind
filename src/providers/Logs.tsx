@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from 'react'
+import type React from 'react'
+import { createContext, useContext, useState } from 'react'
 
 interface LogsContextType {
   logs: string[]
@@ -7,11 +8,13 @@ interface LogsContextType {
 
 const LogsContext = createContext<LogsContextType | undefined>(undefined)
 
-export const LogsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const LogsProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [logs, setLogs] = useState<string[]>([])
 
   const addLog = (log: string) => {
-    setLogs(prevLogs => [...prevLogs, log])
+    setLogs((prevLogs) => [...prevLogs, log])
   }
 
   return (
