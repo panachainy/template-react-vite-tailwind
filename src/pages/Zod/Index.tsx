@@ -30,11 +30,11 @@ const ZodExample = () => {
     } catch (err) {
       if (err instanceof z.ZodError) {
         const errMap: Record<string, string> = {}
-        err.errors.forEach((error) => {
+        for (const error of err.errors) {
           if (error.path) {
             errMap[error.path[0]] = error.message
           }
-        })
+        }
         setValidationErrors(errMap)
       }
     }
