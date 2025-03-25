@@ -53,8 +53,11 @@ const ZodExample = () => {
       <h1 className="mb-4 font-bold text-2xl">Form Validation with Zod</h1>
       <form onSubmit={validateForm} className="space-y-4">
         <div>
-          <label className="mb-1 block">Username:</label>
+          <label htmlFor="username" className="mb-1 block">
+            Username:
+          </label>
           <input
+            id="username"
             placeholder="asd"
             type="text"
             name="username"
