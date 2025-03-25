@@ -1,6 +1,6 @@
 import './App.css'
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import ErrorPage from './pages/Core/Error'
 import Example from './pages/Example/Example'
 import { LogsProvider } from './providers/Logs'

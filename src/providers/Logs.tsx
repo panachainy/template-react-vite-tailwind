@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from 'react'
+import type React from 'react'
+import { createContext, useContext, useState } from 'react'
 
 interface LogsContextType {
   logs: string[]
@@ -7,11 +8,13 @@ interface LogsContextType {
 
 const LogsContext = createContext<LogsContextType | undefined>(undefined)
 
-export const LogsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const LogsProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [logs, setLogs] = useState<string[]>([])
 
   const addLog = (log: string) => {
-    setLogs(prevLogs => [...prevLogs, log])
+    setLogs((prevLogs) => [...prevLogs, log])
   }
 
   return (
@@ -22,6 +25,7 @@ export const LogsProvider: React.FC<{ children: React.ReactNode }> = ({ children
   )
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useLogs = (): LogsContextType => {
   const context = useContext(LogsContext)
   if (!context) {
@@ -45,8 +49,8 @@ const LogsComponent: React.FC<{ logs: string[] }> = ({ logs }) => {
     >
       <strong>Logs:</strong>
       <ul>
-        {logs.map((log, index) => (
-          <li key={index}>{log}</li>
+        {logs.map((log) => (
+          <li key={`${log}`}>{log}</li>
         ))}
       </ul>
     </div>

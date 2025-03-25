@@ -1,2 +1,2 @@
-# pnpm test
-pnpm format:check
+# bun test
+# bun check

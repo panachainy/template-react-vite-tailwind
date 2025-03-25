@@ -18,7 +18,7 @@
 To build the project, run:
 
 ```sh
-pnpm build
+bun build
 ```
 
 artifacts will be generated in the `dist` folder.
@@ -28,13 +28,13 @@ artifacts will be generated in the `dist` folder.
 To run the project in development mode, run:
 
 ```sh
-pnpm dev
+bun dev
 ```
 
 To start the project in production mode, run:
 
 ```sh
-pnpm start
+bun start
 ```
 
 ### Public Directory
@@ -47,7 +47,7 @@ For example, if you add a file named `logo.png` in the `public` directory, it wi
 
 Vite supports environment variables and modes. You can define environment variables in `.env` files. For example, to define a variable for development mode, create a file named `.env.development` and add your variables:
 
-```
+```bash
 VITE_API_URL=https://api.example.com
 ```
 
@@ -63,8 +63,17 @@ For more information, refer to the [Vite Environment Variables and Modes](https:
 
 To set up Husky, run the following command:
 
+TODO: husky is not work on bun will fix later
+
 ```sh
-pnpm prepare
+bun prepare
 ```
 
 This will configure Husky to manage your Git hooks.
+
+## Dependencies tools
+
+- bun
+- zod
+- clsx
+- tailwindcss
