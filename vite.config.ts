@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import Inspect from 'vite-plugin-inspect'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -72,6 +73,9 @@ export default defineConfig({
       },
       cache: false,
       cacheLocation: undefined,
+    }),
+    Inspect({
+      build: false,
     }),
   ],
   publicDir: 'src/assets',
