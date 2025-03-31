@@ -14,6 +14,9 @@ function Navbar() {
         <li>
           <a href="/zod">Zod</a>
         </li>
+        <li>
+          <a href="/styled">Styled</a>
+        </li>
       </ul>
     </nav>
   )
