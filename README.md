@@ -77,3 +77,7 @@ This will configure Husky to manage your Git hooks.
 - zod
 - clsx
 - tailwindcss
+- useQuery
+- vite-plugin-inspect
+- styled
+- [vitest](https://vitest.dev/guide/snapshot)
