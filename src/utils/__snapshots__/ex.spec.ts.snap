@@ -1,6 +1,6 @@
-// Bun Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`add should match the snapshot for various inputs 1`] = `
+exports[`add > should match the snapshot for various inputs 1`] = `
 [
   {
     "input": [
