@@ -1,16 +1,12 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`add > should match the snapshot for various inputs 1`] = `
-[
-  {
-    "output": <div>
-      <h1>
-        Oops!
-      </h1>
-      <p>
-        Sorry, an unexpected error has occurred.
-      </p>
-    </div>,
-  },
-]
+exports[`ErrorPage component > should match the snapshot 1`] = `
+<div>
+  <h1>
+    Oops!
+  </h1>
+  <p>
+    Sorry, an unexpected error has occurred.
+  </p>
+</div>
 `;
