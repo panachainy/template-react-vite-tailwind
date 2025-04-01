@@ -7,6 +7,7 @@
     "dev": "vite",
     "t": "bun test",
     "test": "vitest",
+    "t:u":"vitest -u",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "format": "biome check --write --unsafe ./src ./**/*.{ts,tsx,css}",
