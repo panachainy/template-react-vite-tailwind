@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import Inspect from 'vite-plugin-inspect'
+import path from 'node:path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -78,5 +79,10 @@ export default defineConfig({
       build: false,
     }),
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   publicDir: 'src/assets',
 })
