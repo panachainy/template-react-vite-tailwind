@@ -42,7 +42,7 @@ export default defineConfig({
   // Assertion-specific templates
   expect: {
     toHaveScreenshot: {
-      threshold: 0.3, // Acceptable percentage of differing pixels (e.g., 0.2 means 20%)
+      threshold: 0.25, // Acceptable percentage of differing pixels (e.g., 0.2 means 20%)
       maxDiffPixels: 5500, // Maximum number of differing pixels allowed
       maxDiffPixelRatio: 0.03, // Maximum ratio of differing pixels (e.g., 0.02 means 2%)
       animations: 'disabled',
@@ -71,11 +71,11 @@ export default defineConfig({
     /* Test against mobile viewports. */
     {
       name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'], viewport: { width: 457, height: 846 } },
+      use: { ...devices['Pixel 5'] },
     },
     {
       name: 'Mobile Safari',
-      use: { ...devices['iPhone 13'], viewport: { width: 457, height: 664 } },
+      use: { ...devices['iPhone 13'] },
     },
 
     /* Test against branded browsers. */
