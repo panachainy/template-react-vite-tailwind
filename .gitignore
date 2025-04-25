@@ -10,3 +10,9 @@ dist-ssr
 server/dist
 public/dist
 storybook-static/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

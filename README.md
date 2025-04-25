@@ -71,6 +71,32 @@ bun prepare
 
 This will configure Husky to manage your Git hooks.
 
+## E2E
+
+```sh
+  bunx playwright test
+    Runs the end-to-end tests.
+
+  bunx playwright test --ui
+    Starts the interactive UI mode.
+
+  bunx playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.
+
+  bunx playwright test example
+    Runs the tests in a specific file.
+
+  bunx playwright test --debug
+    Runs the tests in debug mode.
+
+  bunx playwright codegen
+    Auto generate tests with Codegen.
+
+We suggest that you begin by typing:
+
+    bunx playwright test
+```
+
 ## Dependencies tools
 
 - bun
@@ -81,3 +107,4 @@ This will configure Husky to manage your Git hooks.
 - vite-plugin-inspect
 - styled
 - [vitest](https://vitest.dev/guide/snapshot)
+
