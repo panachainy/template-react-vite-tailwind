@@ -112,3 +112,5 @@ We suggest that you begin by typing:
 - [X] [playwright](https://playwright.dev/docs/intro)
 - [ ] [global state management zustand](https://github.com/pmndrs/zustand)
 - [ ] [shadcn](https://ui.shadcn.com/)
+- [X] jwt-auth
+- [ ] jwt-refresh-token
