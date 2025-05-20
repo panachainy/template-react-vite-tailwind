@@ -18,11 +18,20 @@ function Navbar() {
     <nav className="bg-gray-800 px-4 py-3">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <div className="flex items-center">
-          <div className="font-bold text-white text-xl">React Router</div>
+          <div className="font-bold text-white text-xl">
+            <a
+              href="/"
+              className="rounded px-3 py-2 text-white hover:bg-gray-700"
+            >
+              Home
+            </a>
+          </div>
+
           <div className="ml-6 hidden items-center sm:flex">
             <span
-              className={`mr-2 inline-block h-3 w-3 rounded-full ${userInfo ? 'bg-green-500' : 'bg-gray-400'
-                }`}
+              className={`mr-2 inline-block h-3 w-3 rounded-full ${
+                userInfo ? 'bg-green-500' : 'bg-gray-400'
+              }`}
               title={userInfo ? 'Logged in' : 'Not logged in'}
             />
             <span className="font-medium text-sm text-white">
@@ -61,14 +70,6 @@ function Navbar() {
         {/* Desktop navigation */}
         <div className="hidden items-center sm:flex">
           <ul className="flex space-x-4">
-            <li>
-              <a
-                href="/"
-                className="rounded px-3 py-2 text-white hover:bg-gray-700"
-              >
-                Home
-              </a>
-            </li>
             <li>
               <a
                 href="/auth/login"
@@ -146,13 +147,15 @@ function Navbar() {
 
         {/* Mobile navigation */}
         <div
-          className={`${isMenuOpen ? 'block' : 'hidden'
-            } absolute top-[60px] right-0 left-0 bg-gray-800 p-4 sm:hidden`}
+          className={`${
+            isMenuOpen ? 'block' : 'hidden'
+          } absolute top-[60px] right-0 left-0 bg-gray-800 p-4 sm:hidden`}
         >
           <div className="mb-4 flex items-center border-gray-700 border-b pb-4">
             <span
-              className={`mr-2 inline-block h-3 w-3 rounded-full ${userInfo ? 'bg-green-500' : 'bg-gray-400'
-                }`}
+              className={`mr-2 inline-block h-3 w-3 rounded-full ${
+                userInfo ? 'bg-green-500' : 'bg-gray-400'
+              }`}
             />
             <span className="font-medium text-sm text-white">
               {userInfo ? 'Logged in' : 'Not logged in'}
@@ -195,7 +198,9 @@ function Navbar() {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  role="img"
                 >
+                  <title> Toggle examples menu</title>
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
