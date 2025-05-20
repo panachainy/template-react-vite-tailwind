@@ -97,7 +97,9 @@ function Navbar() {
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  role="img"
                 >
+                  <title>Toggle examples menu</title>
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
