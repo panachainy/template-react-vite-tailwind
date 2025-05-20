@@ -114,3 +114,4 @@ We suggest that you begin by typing:
 - [ ] [shadcn](https://ui.shadcn.com/)
 - [X] jwt-auth
 - [ ] jwt-refresh-token
+- [ ] change log provider to [vconsole](https://github.com/Tencent/vConsole)
