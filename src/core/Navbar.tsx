@@ -4,9 +4,14 @@ import { useState } from 'react'
 function Navbar() {
   const { userInfo, logout } = UseAuth()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isExamplesOpen, setIsExamplesOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const toggleExamples = () => {
+    setIsExamplesOpen(!isExamplesOpen)
   }
 
   return (
@@ -28,7 +33,7 @@ function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          type='button'
+          type="button"
           onClick={toggleMenu}
           className="inline-flex items-center rounded-lg p-2 text-gray-400 text-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 sm:hidden"
         >
@@ -80,29 +85,49 @@ function Navbar() {
                 Dashboard
               </a>
             </li>
-            <li>
-              <a
-                href="/pokemon"
-                className="rounded px-3 py-2 text-white hover:bg-gray-700"
+            <li className="relative">
+              <button
+                type="button"
+                onClick={toggleExamples}
+                className="flex items-center rounded px-3 py-2 text-white hover:bg-gray-700"
               >
-                Pokemon
-              </a>
-            </li>
-            <li>
-              <a
-                href="/zod"
-                className="rounded px-3 py-2 text-white hover:bg-gray-700"
-              >
-                Zod
-              </a>
-            </li>
-            <li>
-              <a
-                href="/styled"
-                className="rounded px-3 py-2 text-white hover:bg-gray-700"
-              >
-                Styled
-              </a>
+                Examples
+                <svg
+                  className={`ml-1 h-4 w-4 transform transition-transform ${isExamplesOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isExamplesOpen && (
+                <div className="absolute left-0 mt-2 w-48 rounded-md bg-gray-700 py-2 shadow-lg">
+                  <a
+                    href="/pokemon"
+                    className="block px-4 py-2 text-sm text-white hover:bg-gray-600"
+                  >
+                    Pokemon
+                  </a>
+                  <a
+                    href="/zod"
+                    className="block px-4 py-2 text-sm text-white hover:bg-gray-600"
+                  >
+                    Zod
+                  </a>
+                  <a
+                    href="/styled"
+                    className="block px-4 py-2 text-sm text-white hover:bg-gray-600"
+                  >
+                    Styled
+                  </a>
+                </div>
+              )}
             </li>
           </ul>
 
@@ -157,28 +182,48 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a
-                href="/pokemon"
-                className="block rounded px-3 py-2 text-white hover:bg-gray-700"
+              <button
+                type="button"
+                onClick={toggleExamples}
+                className="flex w-full items-center rounded px-3 py-2 text-white hover:bg-gray-700"
               >
-                Pokemon
-              </a>
-            </li>
-            <li>
-              <a
-                href="/zod"
-                className="block rounded px-3 py-2 text-white hover:bg-gray-700"
-              >
-                Zod
-              </a>
-            </li>
-            <li>
-              <a
-                href="/styled"
-                className="block rounded px-3 py-2 text-white hover:bg-gray-700"
-              >
-                Styled
-              </a>
+                Examples
+                <svg
+                  className={`ml-1 h-4 w-4 transform transition-transform ${isExamplesOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isExamplesOpen && (
+                <div className="mt-2 ml-4 space-y-2">
+                  <a
+                    href="/pokemon"
+                    className="block rounded px-3 py-2 text-white hover:bg-gray-700"
+                  >
+                    Pokemon
+                  </a>
+                  <a
+                    href="/zod"
+                    className="block rounded px-3 py-2 text-white hover:bg-gray-700"
+                  >
+                    Zod
+                  </a>
+                  <a
+                    href="/styled"
+                    className="block rounded px-3 py-2 text-white hover:bg-gray-700"
+                  >
+                    Styled
+                  </a>
+                </div>
+              )}
             </li>
           </ul>
           {userInfo && (
