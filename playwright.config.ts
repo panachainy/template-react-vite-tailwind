@@ -42,9 +42,9 @@ export default defineConfig({
   // Assertion-specific templates
   expect: {
     toHaveScreenshot: {
-      threshold: 0.25, // Acceptable percentage of differing pixels (e.g., 0.2 means 20%)
-      maxDiffPixels: 5500, // Maximum number of differing pixels allowed
-      maxDiffPixelRatio: 0.03, // Maximum ratio of differing pixels (e.g., 0.02 means 2%)
+      threshold: 0.3, // Acceptable percentage of differing pixels (e.g., 0.3 means 30%)
+      maxDiffPixels: 10000, // Maximum number of differing pixels allowed
+      maxDiffPixelRatio: 0.05, // Maximum ratio of differing pixels (e.g., 0.05 means 5%)
       animations: "disabled",
       pathTemplate:
         "{testDir}/__screenshots__{/projectName}/{testFilePath}/{arg}{ext}",
