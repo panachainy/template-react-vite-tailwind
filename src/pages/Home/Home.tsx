@@ -1,36 +1,15 @@
-const people = [
-  {
-    name: 'Calvin Hawkins',
-    email: 'calvin.hawkins@example.com',
-    image:
-      'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    name: 'Kristen Ramos',
-    email: 'kristen.ramos@example.com',
-    image:
-      'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    name: 'Ted Fox',
-    email: 'ted.fox@example.com',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-]
-
-export default function Example() {
+export default function HomePage() {
   return (
-    <ul className="divide-y divide-gray-200">
-      {people.map((person) => (
-        <li key={person.email} className="flex py-4">
-          <img className="size-10 rounded-full" src={person.image} alt="" />
-          <div className="ml-3">
-            <p className="font-medium text-gray-900 text-sm">{person.name}</p>
-            <p className="text-gray-500 text-sm">{person.email}</p>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <div className="flex flex-col items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 py-6">
+      <div className="rounded-lg bg-white px-6 py-3 shadow-lg sm:mx-auto sm:max-w-xl">
+        <h1 className="text-center font-bold text-3xl text-gray-800">
+          Welcome to Your Beautiful Home Page
+        </h1>
+        <p className="mt-4 text-center text-gray-600">
+          This is a stunning homepage built with Tailwind CSS. Customize it to
+          suit your needs!
+        </p>
+      </div>
+    </div>
   )
 }
