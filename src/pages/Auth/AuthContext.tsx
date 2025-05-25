@@ -27,7 +27,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   // Check authentication status on mount and after token refresh
   useEffect(() => {
-    console.log('TODO: 1. implement later Refreshing access token...')
     // const checkAuthStatus = async () => {
     //   try {
     //     const response = await fetch(
