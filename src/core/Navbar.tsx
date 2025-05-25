@@ -1,9 +1,9 @@
+import type { MenuItem } from '@/components/DropdownMenu'
 import { UseAuth } from '@/pages/Auth/AuthContext'
 import { useState } from 'react'
 import { StatusIndicator } from '../components/StatusIndicator'
 import { DesktopNavigation } from './components/navigation/DesktopNavigation'
 import { MobileNavigation } from './components/navigation/MobileNavigation'
-import type { MenuItem } from './components/navigation/types'
 
 const navigationItems: MenuItem[] = [
   {
