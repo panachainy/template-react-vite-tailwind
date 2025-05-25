@@ -4,6 +4,10 @@ import { LogsProvider } from '@/providers/Logs'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import ErrorPage from './core/Error'
 import { MainLayout } from './layouts/Main'
+import { AuthProvider } from './pages/Auth/AuthContext'
+import { AuthDashboardPage } from './pages/Auth/AuthDashboardPage'
+import { AuthCallbackPage } from './pages/Auth/Callback'
+import { LoginPage } from './pages/Auth/LoginPage'
 import Home from './pages/Home/Home'
 import PokemonPage from './pages/Pokemon/Index'
 import { StyledExamplePage } from './pages/Styled/Index'
@@ -15,6 +19,33 @@ const router = createBrowserRouter([
     element: (
       <MainLayout>
         <Home />
+      </MainLayout>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: 'auth/login',
+    element: (
+      <MainLayout>
+        <LoginPage />
+      </MainLayout>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: 'auth/callback',
+    element: (
+      <MainLayout>
+        <AuthCallbackPage />
+      </MainLayout>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: 'auth/dashboard',
+    element: (
+      <MainLayout>
+        <AuthDashboardPage />
       </MainLayout>
     ),
     errorElement: <ErrorPage />,
@@ -50,9 +81,11 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <LogsProvider>
-      <RouterProvider router={router} />
-    </LogsProvider>
+    <AuthProvider>
+      <LogsProvider>
+        <RouterProvider router={router} />
+      </LogsProvider>
+    </AuthProvider>
   )
 }
 

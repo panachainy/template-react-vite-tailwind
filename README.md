@@ -101,12 +101,18 @@ We suggest that you begin by typing:
 
 ## Dependencies tools
 
-- bun
-- zod
-- clsx
-- tailwindcss
-- useQuery
-- vite-plugin-inspect
-- styled
-- [vitest](https://vitest.dev/guide/snapshot)
-- [playwright](https://playwright.dev/docs/intro)
+- [x] bun
+- [x] zod
+- [x] clsx
+- [x] tailwindcss
+- [x] useQuery
+- [x] vite-plugin-inspect
+- [x] styled
+- [x] [vitest](https://vitest.dev/guide/snapshot)
+- [x] [playwright](https://playwright.dev/docs/intro)
+- [ ] Auth
+  - [x] jwt-auth
+  - [ ] refresh-token
+- [ ] [global state management zustand](https://github.com/pmndrs/zustand)
+- [ ] [shadcn](https://ui.shadcn.com/)
+- [ ] change log provider to [vconsole](https://github.com/Tencent/vConsole)
