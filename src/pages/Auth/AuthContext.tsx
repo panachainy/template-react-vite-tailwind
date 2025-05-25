@@ -61,7 +61,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   // Function to handle login
   const loginWithLine = async () => {
-    window.location.href = 'http://localhost:8080/api/v1/auth/line/login'
+    window.location.href = `${import.meta.env.VITE_LINE_AUTH_BASE_URL}/api/v1/auth/line/login`
   }
 
   const setAccessToken = (accessToken: string | null) => {
