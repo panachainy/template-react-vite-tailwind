@@ -49,7 +49,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     //     setUserInfo(null)
     //   }
     // }
-
     // checkAuthStatus()
   }, [])
 
