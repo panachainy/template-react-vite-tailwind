@@ -14,7 +14,6 @@ export function AuthCallbackPage() {
 
       if (token) {
         setAccessToken(token)
-        localStorage.setItem('jwt', token)
         console.log('Token found in URL:', token)
       } else {
         setError('No authentication token found')
