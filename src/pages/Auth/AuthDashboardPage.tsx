@@ -33,14 +33,44 @@ export function AuthDashboardPage() {
                 </h2>
                 <div className="space-y-2">
                   <div>
-                    <p className="font-medium text-gray-700">Access Token:</p>
+                    <div className="flex items-center justify-between">
+                      <p className="font-medium text-gray-700">Access Token:</p>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          navigator.clipboard.writeText(
+                            (userInfo as { accessToken: string | null })
+                              ?.accessToken || '',
+                          )
+                        }
+                        className="rounded bg-blue-500 px-2 py-1 text-white text-xs hover:bg-blue-600"
+                      >
+                        Copy
+                      </button>
+                    </div>
                     <p className="break-all text-gray-600 text-sm">
                       {(userInfo as { accessToken: string | null })
                         ?.accessToken || 'No access token'}
                     </p>
                   </div>
                   <div>
-                    <p className="font-medium text-gray-700">Refresh Token:</p>
+                    <div className="flex items-center justify-between">
+                      <p className="font-medium text-gray-700">
+                        Refresh Token:
+                      </p>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          navigator.clipboard.writeText(
+                            (userInfo as { refreshToken: string | null })
+                              ?.refreshToken || '',
+                          )
+                        }
+                        className="rounded bg-blue-500 px-2 py-1 text-white text-xs hover:bg-blue-600"
+                      >
+                        Copy
+                      </button>
+                    </div>
                     <p className="break-all text-gray-600 text-sm">
                       {(userInfo as { refreshToken: string | null })
                         ?.refreshToken || 'No refresh token'}
