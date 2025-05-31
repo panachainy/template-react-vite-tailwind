@@ -1,6 +1,6 @@
-[![Playwright Tests](https://github.com/panachainy/template-react-vite-tailwind/actions/workflows/playwright.yml/badge.svg)](https://github.com/panachainy/template-react-vite-tailwind/actions/workflows/playwright.yml)
-
 # Setup
+
+[![Playwright Tests](https://github.com/panachainy/template-react-vite-tailwind/actions/workflows/playwright.yml/badge.svg)](https://github.com/panachainy/template-react-vite-tailwind/actions/workflows/playwright.yml)
 
 [Web](https://template-react-vite-tailwind.pages.dev)
 
