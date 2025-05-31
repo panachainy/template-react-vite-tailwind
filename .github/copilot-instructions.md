@@ -67,3 +67,5 @@ This is a React application built with Vite and styled with Tailwind CSS. It ser
 - Organize tests by page/feature (e.g., `e2e/src/pages/Home/Home.spec.tsx`)
 - Use descriptive test file names with `.spec.tsx` extension
 - e.g. code place `src/pages/Home/Home.tsx` test place `e2e/src/pages/Home/Home.spec.tsx`
+- focused on snapshot testing for consistent UI validation
+- Use `beforeEach` and `afterEach` hooks for setup and teardown
