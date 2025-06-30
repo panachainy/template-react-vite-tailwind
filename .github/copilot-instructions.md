@@ -44,7 +44,6 @@ Each feature/page follows a modular structure:
 - **TanStack Query** - Server state management
 - **Axios** - HTTP client for API requests
 - **Zod** - Schema validation
-- **Headless UI** - Unstyled, accessible UI components
 - **Heroicons** - Beautiful hand-crafted SVG icons
 - **Styled Components** - CSS-in-JS styling solution
 
@@ -69,7 +68,6 @@ Each feature/page follows a modular structure:
 - Use Tailwind CSS utility classes for styling
 - Follow mobile-first responsive design principles
 - Use Tailwind's design system for consistent spacing and colors
-- Leverage Headless UI for accessible component primitives
 - Use CSS-in-JS (styled-components) only when Tailwind is insufficient
 - Optimize images using Vite's image optimization plugin
 - Use CSS Grid and Flexbox for layouts
