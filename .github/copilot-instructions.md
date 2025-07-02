@@ -2,6 +2,7 @@
 
 ## Project Overview
 This is a modern React template project built with Vite, TypeScript, Tailwind CSS, and comprehensive testing setup. It serves as a foundation for building scalable React web applications with excellent developer experience, performance, and maintainability.
+We use bun & bunx for package management and script execution, ensuring fast installs and efficient builds.
 
 ## Code Style Guidelines
 - Follow TypeScript best practices with strict type checking
