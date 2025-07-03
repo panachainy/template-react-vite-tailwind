@@ -1,6 +1,6 @@
-[![Playwright Tests](https://github.com/panachainy/template-react-vite-tailwind/actions/workflows/playwright.yml/badge.svg)](https://github.com/panachainy/template-react-vite-tailwind/actions/workflows/playwright.yml)
-
 # Setup
+
+[![Playwright Tests](https://github.com/panachainy/template-react-vite-tailwind/actions/workflows/playwright.yml/badge.svg)](https://github.com/panachainy/template-react-vite-tailwind/actions/workflows/playwright.yml)
 
 [Web](https://template-react-vite-tailwind.pages.dev)
 
@@ -113,6 +113,6 @@ We suggest that you begin by typing:
 - [ ] Auth
   - [x] jwt-auth
   - [ ] refresh-token
+- [x] [shadcn](https://ui.shadcn.com/) or [magic-ui **try this first](https://github.com/magicuidesign/magicui)
 - [ ] [global state management zustand](https://github.com/pmndrs/zustand)
-- [ ] [shadcn](https://ui.shadcn.com/)
 - [ ] change log provider to [vconsole](https://github.com/Tencent/vConsole)
