@@ -10,6 +10,7 @@ import { AuthCallbackPage } from './pages/Auth/Callback'
 import { LoginPage } from './pages/Auth/LoginPage'
 import Home from './pages/Home/Home'
 import PokemonPage from './pages/Pokemon/Index'
+import ShadcnDemoPage from './pages/ShadcnDemo'
 import { StyledExamplePage } from './pages/Styled/Index'
 import ZodExample from './pages/Zod/Index'
 
@@ -73,6 +74,15 @@ const router = createBrowserRouter([
     element: (
       <MainLayout>
         <StyledExamplePage />
+      </MainLayout>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/shadcn',
+    element: (
+      <MainLayout>
+        <ShadcnDemoPage />
       </MainLayout>
     ),
     errorElement: <ErrorPage />,
