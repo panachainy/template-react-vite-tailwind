@@ -10,3 +10,49 @@ exports[`ErrorPage component > should match the snapshot 1`] = `
   </p>
 </div>
 `;
+
+exports[`ErrorPage component should match the snapshot 1`] = `
+{
+  "$$typeof": Symbol(react.transitional.element),
+  "_debugInfo": null,
+  "_owner": null,
+  "_store": {
+    "validated": 0,
+  },
+  "key": null,
+  "props": {
+    "children": [
+      {
+        "$$typeof": Symbol(react.transitional.element),
+        "_debugInfo": null,
+        "_owner": null,
+        "_store": {
+          "validated": 1,
+        },
+        "key": null,
+        "props": {
+          "children": "Oops!",
+        },
+        "ref": null,
+        "type": "h1",
+      },
+      {
+        "$$typeof": Symbol(react.transitional.element),
+        "_debugInfo": null,
+        "_owner": null,
+        "_store": {
+          "validated": 1,
+        },
+        "key": null,
+        "props": {
+          "children": "Sorry, an unexpected error has occurred.",
+        },
+        "ref": null,
+        "type": "p",
+      },
+    ],
+  },
+  "ref": null,
+  "type": "div",
+}
+`;

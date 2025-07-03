@@ -1,71 +1,144 @@
-# GitHub Copilot Instructions
+# Copilot Instructions for React Vite Tailwind Template
 
 ## Project Overview
-This is a React application built with Vite and styled with Tailwind CSS. It serves as a modern frontend development template with fast build times and utility-first CSS framework.
+This is a modern React template project built with Vite, TypeScript, Tailwind CSS, and comprehensive testing setup. It serves as a foundation for building scalable React web applications with excellent developer experience, performance, and maintainability.
+We use bun & bunx for package management and script execution, ensuring fast installs and efficient builds.
 
-## Tech Stack
-- **React**: UI library for building user interfaces
-- **Vite**: Fast build tool and development server
-- **Tailwind CSS**: Utility-first CSS framework
-- **TypeScript**: Superset of JavaScript for type safety
-- **Vitest**: Testing framework for unit tests
-- **Playwright**: End-to-end testing framework
-
-## Development Guidelines
-
-### Code Style
-- Use functional components with hooks
-- Prefer TypeScript for type safety
-- Use Tailwind utility classes for styling
-- Follow React best practices for component composition
-
-### File Structure
-- Components should be placed in `src/components/`
-- Pages/routes in `src/pages/` or `src/routes/`
-- Utilities and helpers in `src/utils/`
-- Types/interfaces in `src/types/`
-
-### Component Patterns
-- Use arrow functions for components
-- Implement proper prop types with TypeScript
-- Create reusable UI components
-- Use custom hooks for complex logic
-
-### Styling Guidelines
-- Prefer Tailwind utility classes over custom CSS
-- Use responsive design patterns with Tailwind breakpoints
-- Create custom components for repeated UI patterns
-- Follow mobile-first responsive design
-
-### Best Practices
-- Keep components small and focused
+## Code Style Guidelines
+- Follow TypeScript best practices with strict type checking
+- Use explicit return types for all functions
 - Use meaningful variable and function names
-- Implement proper error handling
-- Write clean, readable code with appropriate comments
+- Write clear, concise comments for complex logic
+- Prefer functional components over class components
+- Use React hooks for state management and side effects
+- Follow React component composition patterns
+- Use Biome for code formatting and linting
 
-### Testing
-- Use Vitest and React Testing Library for unit tests
-- Write tests for components, utilities, and hooks
-- Ensure tests cover edge cases and user interactions
-- Use snapshot testing for consistent output validation
-- Group related test cases using `describe` blocks
-- Test multiple scenarios with comprehensive input variations
-- Include edge cases like zero values, negative numbers, and boundary conditions
+## Project Structure
+- `/src` - Main application source code
+- `/src/pages` - Page components organized by feature/route
+- `/src/components` - Reusable UI components
+- `/src/core` - Core application components (Navbar, Error, etc.)
+- `/src/layouts` - Layout components for page structure
+- `/src/providers` - React context providers
+- `/src/utils` - Utility functions and helpers
+- `/src/assets` - Static assets (images, icons, etc.)
+- `/e2e` - End-to-end tests with Playwright
+- `/public` - Public static files
+- `/coverage` - Test coverage reports
 
-### E2E Testing
-- Use Playwright for end-to-end testing
-- Write tests that simulate real user interactions
-- Test critical user flows and navigation paths
-- Use data-testid attributes for reliable element selection
-- Test across different browsers and devices
-- Include visual regression testing when applicable
-- Test form submissions, API interactions, and state changes
-- Verify accessibility compliance in user workflows
+## Architecture Pattern
+Each feature/page follows a modular structure:
+- `pages/[Feature]/` - Feature-specific pages and components
+- `pages/[Feature]/interfaces/` - TypeScript interfaces and types
+- `pages/[Feature]/[FeatureName].tsx` - Main feature component
+- `components/` - Shared reusable components
+- `layouts/` - Page layout wrappers
+- `providers/` - Context providers for global state
 
-#### File Organization
-- Place E2E tests in `e2e/` directory
-- Organize tests by page/feature (e.g., `e2e/src/pages/Home/Home.spec.tsx`)
-- Use descriptive test file names with `.spec.tsx` extension
-- e.g. code place `src/pages/Home/Home.tsx` test place `e2e/src/pages/Home/Home.spec.tsx`
-- focused on snapshot testing for consistent UI validation
-- Use `beforeEach` and `afterEach` hooks for setup and teardown
+## Dependencies
+- **React 19** - UI library with latest features
+- **Vite** - Fast build tool and dev server
+- **TypeScript** - Type safety and developer experience
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router DOM** - Client-side routing
+- **TanStack Query** - Server state management
+- **Axios** - HTTP client for API requests
+- **Zod** - Schema validation
+- **Heroicons** - Beautiful hand-crafted SVG icons
+- **Styled Components** - CSS-in-JS styling solution
+
+## Testing & Quality Assurance
+- **Vitest** - Unit and integration testing
+- **Playwright** - End-to-end testing with visual regression
+- **Biome** - Fast formatter and linter
+- **Husky** - Git hooks for code quality
+- **ESLint** - JavaScript/TypeScript linting
+- **Prettier** - Code formatting with Tailwind plugin
+
+## Component Development Patterns
+- Use functional components with TypeScript interfaces
+- Export components as named exports when possible
+- Use proper prop typing with TypeScript interfaces
+- Implement proper error boundaries for robust UIs
+- Use React.memo() for performance optimization when needed
+- Follow compound component pattern for complex components
+- Use custom hooks for reusable stateful logic
+
+## Styling Guidelines
+- Use Tailwind CSS utility classes for styling
+- Follow mobile-first responsive design principles
+- Use Tailwind's design system for consistent spacing and colors
+- Use CSS-in-JS (styled-components) only when Tailwind is insufficient
+- Optimize images using Vite's image optimization plugin
+- Use CSS Grid and Flexbox for layouts
+
+## State Management
+- Use React Context for global application state
+- Implement custom hooks for complex state logic
+- Use TanStack Query for server state management
+- Store authentication state in localStorage with proper serialization
+- Use useReducer for complex local component state
+- Follow the principle of lifting state up when needed
+
+## Routing & Navigation
+- Use React Router DOM for client-side routing
+- Implement proper error boundaries for routes
+- Use nested layouts for consistent page structure
+- Implement protected routes with authentication guards
+- Use proper loading states for async route components
+- Follow RESTful URL patterns
+
+## Testing Patterns
+- Use Vitest for unit and integration tests
+- Write snapshot tests for component regression testing
+- Use Playwright for end-to-end testing with visual screenshots
+- Test user interactions and accessibility
+- Mock external dependencies appropriately
+- Test error states and edge cases
+- Use data-testid attributes for reliable test selectors
+- Implement visual regression testing with Playwright screenshots
+
+## Build & Development
+- Use Vite for fast development and optimized builds
+- Configure path aliases (@/*) for clean imports
+- Use TypeScript strict mode for better code quality
+- Implement proper environment variable handling
+- Use ES modules and modern JavaScript features
+- Optimize bundle size with proper code splitting
+- Use Vite plugins for enhanced development experience
+
+## Performance Optimization
+- Implement lazy loading for route components
+- Use React.memo() and useMemo() for expensive computations
+- Optimize images with WebP format and proper sizing
+- Use Vite's built-in code splitting and tree shaking
+- Implement proper loading states and skeleton UIs
+- Use TanStack Query for efficient data fetching and caching
+- Monitor and optimize Core Web Vitals
+
+## Authentication & Security
+- Implement secure token storage patterns
+- Use proper authentication context providers
+- Implement protected route patterns
+- Handle authentication state persistence
+- Use secure HTTP headers and HTTPS in production
+- Validate all user inputs with Zod schemas
+- Implement proper error handling for auth failures
+
+## Code Quality & Formatting
+- Use Biome for consistent code formatting and linting
+- Configure Prettier with Tailwind plugin for class sorting
+- Use Husky for pre-commit hooks
+- Follow conventional commit messages
+- Use TypeScript strict mode for better type safety
+- Implement proper ESLint rules for React and TypeScript
+- Use absolute imports with path mapping (@/*)
+
+## Deployment & CI/CD
+- Build optimized production bundles with Vite
+- Use proper environment variables for different environments
+- Implement continuous integration with GitHub Actions
+- Use Playwright for automated testing in CI
+- Deploy to modern hosting platforms (Cloudflare Pages, Vercel, etc.)
+- Monitor application performance and errors in production
