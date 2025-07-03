@@ -113,6 +113,6 @@ We suggest that you begin by typing:
 - [ ] Auth
   - [x] jwt-auth
   - [ ] refresh-token
+- [x] [shadcn](https://ui.shadcn.com/) or [magic-ui **try this first](https://github.com/magicuidesign/magicui)
 - [ ] [global state management zustand](https://github.com/pmndrs/zustand)
-- [ ] [shadcn](https://ui.shadcn.com/) or [magic-ui **try this first](https://github.com/magicuidesign/magicui)
 - [ ] change log provider to [vconsole](https://github.com/Tencent/vConsole)
