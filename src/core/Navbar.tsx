@@ -20,6 +20,7 @@ const navigationItems: MenuItem[] = [
       { label: 'Pokemon', href: '/pokemon' },
       { label: 'Zod', href: '/zod' },
       { label: 'Styled', href: '/styled' },
+      { label: 'Shadcn', href: '/shadcn' },
     ],
   },
 ]
