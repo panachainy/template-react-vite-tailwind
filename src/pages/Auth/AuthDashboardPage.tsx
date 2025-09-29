@@ -1,7 +1,9 @@
+
 import { UseAuth } from './AuthContext'
 
 export function AuthDashboardPage() {
-  const { userInfo } = UseAuth()
+  const auth = UseAuth()
+  const { userInfo } = auth
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
@@ -74,6 +76,8 @@ export function AuthDashboardPage() {
                     <p className="break-all text-gray-600 text-sm">
                       {(userInfo as { refreshToken: string | null })
                         ?.refreshToken || 'No refresh token'}
+
+============== {userInfo ? JSON.stringify(userInfo, null, 2) : 'no userInfo'} ==============
                     </p>
                   </div>
                 </div>

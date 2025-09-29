@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom'
 import { UseAuth } from './AuthContext'
 
 export function AuthCallbackPage() {
-  const { setAccessToken } = UseAuth()
+  const { setAccessToken, setRefreshToken } = UseAuth()
   const [error, setError] = useState<string | null>(null)
   const [isProcessing, setIsProcessing] = useState(true)
 
@@ -11,14 +11,32 @@ export function AuthCallbackPage() {
     try {
       const params = new URLSearchParams(window.location.search)
       const token = params.get('token')
+      const refreshToken = params.get('refresh_token')
 
-      if (token) {
-        setAccessToken(token)
-        console.log('Token found in URL:', token)
-      } else {
-        setError('No authentication token found')
-        console.log('No token found in URL')
+      // log params
+      for (const [key, value] of params.entries()) {
+        console.log(`======= AuthCallbackPage param: ${key} = ${value}`)
       }
+
+      if (token || refreshToken) {
+        if (!token) {
+          setError('No authentication token found')
+          console.log('No token found in URL')
+        }
+
+        if (token) {
+          setAccessToken(token)
+          console.log('Token found in URL:', token)
+        }
+      }
+
+      // if (refreshToken) {
+      //   setRefreshToken(refreshToken)
+      //   console.log('Refresh token found in URL:', refreshToken)
+      // }
+
+
+
     } catch (err) {
       setError('Failed to process authentication')
       console.error('Authentication error:', err)

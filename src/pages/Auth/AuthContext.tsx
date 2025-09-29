@@ -72,6 +72,16 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     })
   }
 
+  const setRefreshToken = (refreshToken: string | null) => {
+    setUserInfo((prevUserInfo) => {
+      const newUserInfo = {
+        accessToken: prevUserInfo?.accessToken || '',
+        refreshToken,
+      }
+      return newUserInfo
+    })
+  }
+
   const logout = () => {
     setUserInfo(null)
   }
@@ -81,6 +91,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       value={{
         userInfo,
         setAccessToken,
+        setRefreshToken,
         loginWithLine,
         refreshAccessToken,
         logout,
