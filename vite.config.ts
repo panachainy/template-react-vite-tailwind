@@ -1,10 +1,10 @@
-import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
-import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
-import tsconfigPaths from "vite-tsconfig-paths";
-import Inspect from "vite-plugin-inspect";
-import path from "node:path";
+import path from 'node:path'
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import Inspect from 'vite-plugin-inspect'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -23,7 +23,7 @@ export default defineConfig({
         multipass: true,
         plugins: [
           {
-            name: "preset-default",
+            name: 'preset-default',
             params: {
               overrides: {
                 cleanupNumericValues: false,
@@ -31,11 +31,11 @@ export default defineConfig({
               },
             },
           },
-          "sortAttrs",
+          'sortAttrs',
           {
-            name: "addAttributesToSVGElement",
+            name: 'addAttributesToSVGElement',
             params: {
-              attributes: [{ xmlns: "http://www.w3.org/2000/svg" }],
+              attributes: [{ xmlns: 'http://www.w3.org/2000/svg' }],
             },
           },
         ],
@@ -66,10 +66,10 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
-  publicDir: "src/assets",
+  publicDir: 'src/assets',
   server: {
     port: 3000,
     // open: true,
@@ -77,4 +77,4 @@ export default defineConfig({
   build: {
     sourcemap: true, // Generate sourcemaps for better debugging
   },
-});
+})
