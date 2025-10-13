@@ -27,7 +27,7 @@ export default defineConfig({
             params: {
               overrides: {
                 cleanupNumericValues: false,
-                removeViewBox: false, // https://github.com/svg/svgo/issues/1128
+                removeViewBox: false,
               },
             },
           },
@@ -72,9 +72,9 @@ export default defineConfig({
   publicDir: 'src/assets',
   server: {
     port: 3000,
-    // open: true,
+    open: true,
   },
   build: {
-    sourcemap: true, // Generate sourcemaps for better debugging
+    sourcemap: true,
   },
 })
