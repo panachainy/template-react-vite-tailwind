@@ -13,7 +13,8 @@
     "check:fix": "biome check --write ./src ./**/*.{ts,tsx,css}",
     "prepare": "husky",
     "e2e": "bunx playwright test",
-    "e2e:refresh": "bunx playwright test --update-snapshots"
+    "e2e:refresh": "bunx playwright test --update-snapshots",
+    "clean": "rm -rf node_modules .vite .turbo dist"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
