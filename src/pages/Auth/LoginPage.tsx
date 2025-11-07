@@ -1,8 +1,8 @@
 import { UseAuth } from './AuthContext'
 
-// TODO: https://partnerpens.hashnode.dev/jwt-authentication-in-react-go
+// TODO: Add email/password login form
 export function LoginPage() {
-  const { loginWithLine } = UseAuth()
+  const { loginWithLine, loginWithGoogle } = UseAuth()
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
@@ -18,6 +18,13 @@ export function LoginPage() {
             onClick={loginWithLine}
           >
             Line
+          </button>
+          <button
+            type="button"
+            className="w-full rounded-lg bg-blue-500 px-4 py-2 text-white transition hover:bg-blue-600"
+            onClick={loginWithGoogle}
+          >
+            Google
           </button>
         </div>
       </div>
