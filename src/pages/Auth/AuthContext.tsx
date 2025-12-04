@@ -1,91 +1,75 @@
 import { useContext } from 'react'
-import { createContext, useEffect, useState } from 'react'
+import { createContext } from 'react'
 import type { ReactNode } from 'react'
 import { Navigate } from 'react-router-dom'
+import { authClient } from '../../lib/auth-client'
 import type { AuthContextType } from './interfaces/AuthContext'
 import type { UserInfo } from './interfaces/UserInfo'
-
-const AUTH_STORAGE_KEY = 'auth_user_info'
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [userInfo, setUserInfo] = useState<UserInfo | null>(() => {
-    console.log('action: AUTH_STORAGE_KEY')
-    const storedData = localStorage.getItem(AUTH_STORAGE_KEY)
-    return storedData ? JSON.parse(storedData) : null
-  })
+  const { data: session, isPending } = authClient.useSession()
 
-  // Save to localStorage whenever userInfo changes
-  useEffect(() => {
-    if (userInfo) {
-      localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(userInfo))
-    } else {
-      localStorage.removeItem(AUTH_STORAGE_KEY)
-    }
-  }, [userInfo])
+  const userInfo: UserInfo | null = session || null
 
-  // Check authentication status on mount and after token refresh
-  useEffect(() => {
-    console.log('TODO: 1. implement later Refreshing access token...')
-    // const checkAuthStatus = async () => {
-    //   try {
-    //     const response = await fetch(
-    //       'http://localhost:8080/api/v1/auth/status',
-    //       {
-    //         credentials: 'include', // This is important for sending cookies
-    //       },
-    //     )
-    //     if (response.ok) {
-    //       const data = await response.json()
-    //       setUserInfo({
-    //         accessToken: data.accessToken || null,
-    //         refreshToken: data.refreshToken || null,
-    //       })
-    //     } else {
-    //       setUserInfo(null)
-    //     }
-    //   } catch (error) {
-    //     console.error('Failed to check auth status:', error)
-    //     setUserInfo(null)
-    //   }
-    // }
-
-    // checkAuthStatus()
-  }, [])
-
-  // Function to refresh access token
-  const refreshAccessToken = async () => {
-    console.log('TODO: 2. implement later Refreshing access token...')
-  }
-
-  // Function to handle login
+  // Function to handle login with different providers
   const loginWithLine = async () => {
-    window.location.href = `${import.meta.env.VITE_LINE_AUTH_BASE_URL}/api/v1/auth/line/login`
-  }
-
-  const setAccessToken = (accessToken: string | null) => {
-    setUserInfo((prevUserInfo) => {
-      const newUserInfo = {
-        accessToken,
-        refreshToken: prevUserInfo?.refreshToken || '',
-      }
-      return newUserInfo
+    await authClient.signIn.social({
+      provider: 'line',
     })
   }
 
-  const logout = () => {
-    setUserInfo(null)
+  const loginWithGoogle = async () => {
+    await authClient.signIn.social({
+      provider: 'google',
+    })
+  }
+
+  const loginWithEmail = async (email: string, password: string) => {
+    await authClient.signIn.email({
+      email,
+      password,
+    })
+  }
+
+  const loginAnonymously = async () => {
+    await authClient.signIn.anonymous()
+  }
+
+  const signUpWithEmail = async (
+    email: string,
+    password: string,
+    name: string,
+  ) => {
+    await authClient.signUp.email({
+      email,
+      password,
+      name,
+    })
+  }
+
+  const logout = async () => {
+    await authClient.signOut()
+  }
+
+  const refreshAccessToken = async () => {
+    // Better-auth handles token refresh automatically
+    console.log('Token refresh handled by better-auth')
   }
 
   return (
     <AuthContext.Provider
       value={{
         userInfo,
-        setAccessToken,
+        isPending,
         loginWithLine,
-        refreshAccessToken,
+        loginWithGoogle,
+        loginWithEmail,
+        loginAnonymously,
+        signUpWithEmail,
         logout,
+        refreshAccessToken,
       }}
     >
       {children}
