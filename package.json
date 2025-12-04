@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "format": "biome check --write --unsafe ./src ./**/*.{ts,tsx,css}",
     "check": "biome check ./src ./**/*.{ts,tsx,css}",
-    "check:fix": "biome check ./src ./**/*.{ts,tsx,css} --write .",
+    "check:fix": "biome check ./src ./**/*.{ts,tsx,css} --write",
     "prepare": "husky",
     "e2e": "bunx playwright test",
     "e2e:refresh": "bunx playwright test --update-snapshots"
