@@ -2,7 +2,7 @@ import { UseAuth } from './AuthContext'
 
 // TODO: Add email/password login form
 export function LoginPage() {
-  const { loginWithLine, loginWithGoogle } = UseAuth()
+  const { loginWithLine, loginWithGoogle, loginAnonymously } = UseAuth()
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
@@ -25,6 +25,13 @@ export function LoginPage() {
             onClick={loginWithGoogle}
           >
             Google
+          </button>
+          <button
+            type="button"
+            className="w-full rounded-lg bg-gray-500 px-4 py-2 text-white transition hover:bg-gray-600"
+            onClick={loginAnonymously}
+          >
+            Continue as Guest
           </button>
         </div>
       </div>

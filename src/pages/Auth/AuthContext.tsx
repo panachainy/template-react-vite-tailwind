@@ -33,6 +33,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     })
   }
 
+  const loginAnonymously = async () => {
+    await authClient.signIn.anonymous()
+  }
+
   const signUpWithEmail = async (
     email: string,
     password: string,
@@ -62,6 +66,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         loginWithLine,
         loginWithGoogle,
         loginWithEmail,
+        loginAnonymously,
         signUpWithEmail,
         logout,
         refreshAccessToken,
