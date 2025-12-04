@@ -1,5 +1,8 @@
-import { createAuthClient } from 'better-auth/react'
+import { createAuthClient } from "better-auth/react";
+import { anonymousClient } from "better-auth/client/plugins";
 
 export const authClient = createAuthClient({
-  baseURL: import.meta.env.VITE_BETTER_AUTH_URL || 'http://localhost:3000', // the base url of your auth server
-})
+  plugins: [anonymousClient()],
+  baseURL: import.meta.env.VITE_BETTER_AUTH_URL,
+  basePath: import.meta.env.VITE_BETTER_AUTH_BASE_PATH,
+});
