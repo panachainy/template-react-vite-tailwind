@@ -2,8 +2,16 @@ import type { UserInfo } from './UserInfo'
 
 export interface AuthContextType {
   userInfo: UserInfo | null
-  setAccessToken: (accessToken: string) => void
-  loginWithLine: () => void
-  refreshAccessToken: () => void
-  logout: () => void
+  isPending: boolean
+  loginWithLine: () => Promise<void>
+  loginWithGoogle: () => Promise<void>
+  loginWithEmail: (email: string, password: string) => Promise<void>
+  signUpWithEmail: (
+    email: string,
+    password: string,
+    name: string,
+  ) => Promise<void>
+  loginAnonymously: () => Promise<void>
+  logout: () => Promise<void>
+  refreshAccessToken: () => Promise<void>
 }
